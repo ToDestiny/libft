@@ -6,7 +6,7 @@
 /*   By: acolas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/24 15:19:06 by acolas            #+#    #+#             */
-/*   Updated: 2017/04/24 15:26:52 by acolas           ###   ########.fr       */
+/*   Updated: 2017/04/25 18:32:50 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@ void	ft_putstr(char const *s)
 {
 	int len;
 
-	len = ft_strlen(*s);
-	write(1, &s, len);
+	if (s)
+	{
+		len = ft_strlen(s);
+		if (len > 0)
+		{
+			write(1, s, len);
+			ft_putchar('\0');
+		}
+	}
 }

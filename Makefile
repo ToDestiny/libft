@@ -6,7 +6,7 @@
 #    By: acolas <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/24 14:27:26 by acolas            #+#    #+#              #
-#    Updated: 2017/04/24 15:14:03 by acolas           ###   ########.fr        #
+#    Updated: 2017/04/25 17:07:31 by acolas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Werror -Wextra
 
 NAME = libft.a
 
-SRC = ft_putchar.c \
+SRC = *.c
 
 INC = libft.h
 
