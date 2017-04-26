@@ -6,14 +6,14 @@
 /*   By: acolas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 16:06:26 by acolas            #+#    #+#             */
-/*   Updated: 2017/04/26 16:22:13 by acolas           ###   ########.fr       */
+/*   Updated: 2017/04/26 16:55:07 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.>
+# include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
 
@@ -29,5 +29,10 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 int		ft_atoi(const char *str);
 char	*ft_strdup(const char *str);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 
 #endif
