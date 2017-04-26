@@ -5,16 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/24 14:56:44 by acolas            #+#    #+#             */
-/*   Updated: 2017/04/25 18:56:45 by acolas           ###   ########.fr       */
+/*   Created: 2017/04/26 16:06:26 by acolas            #+#    #+#             */
+/*   Updated: 2017/04/26 16:22:13 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
+# include <unistd.>
 # include <string.h>
+# include <stdlib.h>
 
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
@@ -27,5 +28,6 @@ char	*ft_strnstr(const char *str, const char *to_find, unsigned int n);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 int		ft_atoi(const char *str);
+char	*ft_strdup(const char *str);
 
 #endif

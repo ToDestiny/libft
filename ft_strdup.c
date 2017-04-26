@@ -6,12 +6,11 @@
 /*   By: acolas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 15:43:26 by acolas            #+#    #+#             */
-/*   Updated: 2017/04/26 15:50:36 by acolas           ###   ########.fr       */
+/*   Updated: 2017/04/26 16:11:25 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char		*ft_strdup(const char *str)
 {
