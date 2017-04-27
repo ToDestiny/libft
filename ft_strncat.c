@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/27 10:56:27 by acolas            #+#    #+#             */
-/*   Updated: 2017/04/27 11:17:04 by acolas           ###   ########.fr       */
+/*   Created: 2017/04/27 12:12:42 by acolas            #+#    #+#             */
+/*   Updated: 2017/04/27 12:12:43 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char    *ft_strncat(char *dest, const char *src, int n)
 {
-	int		len;
+    int     i;
+    int     j;
+    int     len;
 
-	len = ft_strlen(s);
-	while (len > 0)
-	{
-		if (c == '\0')
-			return ((char *)s + len);
-		if (s[len] == c)
-			return ((char *)s + len);
-		len--;
-	}
-	return (0);
+    i = 0;
+    j = ft_strlen(dest);
+    len = ft_strlen(src);
+    while (len > 0 && i < n)
+    {
+        dest[j] = src[i];
+        i++;
+        j++;
+        len--;
+    }
+    dest[j] = '\0';
+    return (dest);
 }
