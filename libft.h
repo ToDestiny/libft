@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/26 16:06:26 by acolas            #+#    #+#             */
-/*   Updated: 2017/04/26 17:55:46 by acolas           ###   ########.fr       */
+/*   Created: 2017/04/27 16:09:19 by acolas            #+#    #+#             */
+/*   Updated: 2017/04/27 16:09:24 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-char    *ft_strcat(char *dest, const char *src);
-char    *ft_strncat(char *dest, const char *src, int n);
-int     ft_strlcat(char *dst, const char *src, int size);
-void    *ft_memset(void *str, int c, int n);
+char	*ft_strcat(char *dest, const char *src);
+char	*ft_strncat(char *dest, const char *src, int n);
+int		ft_strlcat(char *dst, const char *src, int size);
+void	*ft_memset(void *str, int c, int n);
 
 #endif
