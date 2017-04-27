@@ -41,5 +41,6 @@ char	*ft_strrchr(const char *s, int c);
 char    *ft_strcat(char *dest, const char *src);
 char    *ft_strncat(char *dest, const char *src, int n);
 int     ft_strlcat(char *dst, const char *src, int size);
+void    *ft_memset(void *str, int c, int n);
 
 #endif

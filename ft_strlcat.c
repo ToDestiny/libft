@@ -36,9 +36,6 @@ int     ft_strlcat(char *dst, const char *src, int size)
         if (j !=  size)
             dst[j] = '\0';
         else
-        {
             dst[j - 1] = '\0';
-            return (len2 - 4);
-        }
         return (len2);
 }
