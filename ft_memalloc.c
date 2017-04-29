@@ -10,4 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	*ft_memalloc(size_t size)
+{
+	void	*tab;
+
+	tab = (void *)malloc(sizeof(void *) * size);
+	if (tab == 0)
+		return (NULL);
+	ft_memset(tab, '\0', size);
+	return (tab);
+}
