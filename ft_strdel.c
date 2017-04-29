@@ -10,4 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void	ft_strdel(char **as)
+{
+	void	**str;
+
+	str = (void **)as;
+	if (as)
+	{
+		free(*str);
+		*as = NULL;
+	}
+}

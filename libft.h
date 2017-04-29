@@ -50,5 +50,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
 
 #endif
