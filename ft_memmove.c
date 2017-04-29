@@ -21,8 +21,11 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	srcc = (char *)src;
 	if (srcc < dstc)
 	{
-		while (n--)
+		while (n != '\0')
+		{
 			dstc[n] = srcc[n];
+			n--;
+		}
 	}
 	else
 		ft_memcpy(dst, src, n);
