@@ -14,11 +14,11 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
+	unsigned int		i;
+	char				*dst;
+
 	if (s)
 	{
-		unsigned int		i;
-		char				*dst;
-
 		i = 0;
 		dst = (char *)malloc(len + 1);
 		if (dst == 0)
