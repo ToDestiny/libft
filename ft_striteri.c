@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acolas <acolas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/02 16:07:23 by acolas            #+#    #+#             */
-/*   Updated: 2017/05/02 16:07:26 by acolas           ###   ########.fr       */
+/*   Created: 2017/05/02 16:35:04 by acolas            #+#    #+#             */
+/*   Updated: 2017/05/02 16:35:09 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int		i;
-	int		len;
+	unsigned int		i;
+	unsigned int		len;
 
 	if (s)
 	{
@@ -23,7 +23,7 @@ void	ft_striter(char *s, void (*f)(char *))
 		len = ft_strlen(s);
 		while (i < len)
 		{
-			(*f)((s + i));
+			(*f)(i, (s + i));
 			i++;
 		}
 	}
