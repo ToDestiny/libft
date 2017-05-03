@@ -49,24 +49,21 @@ char		**ft_strsplit(char const *s, char c)
 	int		i;
 	char	**tab;
 	int		count;
-	int		wd;
 
 	if (!s)
 		return (NULL);
 	i = 0;
 	j = 0;
 	count = ft_count_word(s, c);
-	tab = (char **)malloc(sizeof(char *) * (count + 1));
-	if (tab == 0)
+	if ((tab = (char **)malloc(sizeof(char *) * (count + 1))) == 0)
 		return (NULL);
 	tab[count] = NULL;
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
-			wd = ft_word_len(s + i, c);
-			tab[j] = ft_strsub(s + i, 0, wd)
-			i = i + wd;
+			tab[j] = ft_strsub(s + i, 0, ft_word_len(s + i, c));
+			i = i + ft_word_len(s + i, c);
 			j++;
 		}
 		else
