@@ -12,33 +12,65 @@
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+static int	ft_count_word(char const *s, char c)
 {
-	char const			*end;
-	char const			*beg;
-	char				*dst;
-	unsigned int		i;
-	char				**tab;
+	int	count;
+	int	i;
 
-	if (s)
+	i = 0;
+	count = 0;
+	if (!(s[i] == c))
+		count++;
+	while (s[i] != '\0')
 	{
-		i = 0;
-		while (s[i] == c)
-			i++;
-		beg = (s + i);
-		end = (s + i);
-		while (s[i])
+		if ((s[i - 1] == c) && (s[i] != c))
 		{
-			if (s[i] >= 33 && s[i] <= 126)
-				end = s + i;
+			count++;
 			i++;
 		}
-		if ((end - beg) > 0)
-			end++;
-		dst = ft_strsub(s, beg - s, end - beg);
-		return (tab);
+		i++;
 	}
-	return (0);
+	return (count);
 }
 
+static int	ft_word_len(char const *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0' && s[i] != c)
+		i++;
+	return (i);
+}
+
+char		**ft_strsplit(char const *s, char c)
+{
+	int		j;
+	int		i;
+	char	**tab;
+	int		count;
+	int		wd;
+
+	if (!s)
+		return (NULL);
+	i = 0;
+	j = 0;
+	count = ft_count_word(s, c);
+	tab = (char **)malloc(sizeof(char *) * (count + 1));
+	if (tab == 0)
+		return (NULL);
+	tab[count] = NULL;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			wd = ft_word_len(s + i, c);
+			tab[j] = ft_strsub(s + i, 0, wd)
+			i = i + wd;
+			j++;
+		}
+		else
+			i++;
+	}
+	return (tab);
 }
