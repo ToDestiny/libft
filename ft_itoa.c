@@ -10,3 +10,53 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+static int		ft_count_n(int n)
+{
+	int		count;
+
+	count = 0;
+	if (n == 0)
+		count++;
+	if (n < 0)
+	{
+		n = -n;
+		count++;
+	}
+	while (n)
+	{
+		n = n / 10;
+		count++;
+	}
+	return (count);
+}
+#include <stdio.h> //
+char	*ft_itoa(int n)
+{
+	int				num;
+	char			*str;
+	int				count;
+
+	num = n;
+	count = ft_count_n(n);
+	if (!(str =(char *)malloc(sizeof(char) * (count + 1))))
+		return (NULL);
+	str[count] = '\0';
+	if (n == 0)
+		str[0] = '0';
+	else if (n < 0)
+	{
+		str[0] = '-';
+		str[count - 1] = -(num % 10) + '0';
+		num = -(num / 10);
+		count--;
+	}
+	while (num > 0)
+	{
+		str[count - 1] = (num % 10) + '0';
+		num = num / 10;
+		count--;
+	}
+	return (str);
+}
