@@ -18,17 +18,20 @@ char	*ft_strrev(char *str)
 	int		len;
 	char	tmp;
 
-	if (str)
+	if (!str)
+		return (0);
+	i = -1;
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	len--;
+	while (i < len)
 	{
-		i = 0;
-		len = ft_strlen(str);
-		while (i < len)
-		{
-			tmp = str[i];
-			str[i] = str[len];
-			str[len] = tmp;
-			i++;
-		}
+		tmp = str[i];
+		str[i] = str[len];
+		str[len] = tmp;
+		i++;
+		len--;
 	}
 	return (str);
 }
