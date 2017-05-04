@@ -50,7 +50,7 @@ char		**ft_strsplit(char const *s, char c)
 	char	**tab;
 	int		count;
 
-	if (!s)
+	if (!s || !c)
 		return (NULL);
 	i = 0;
 	j = 0;

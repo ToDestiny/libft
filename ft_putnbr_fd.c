@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acolas <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: acolas <acolas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/29 17:25:45 by acolas            #+#    #+#             */
-/*   Updated: 2017/04/29 17:25:47 by acolas           ###   ########.fr       */
+/*   Created: 2017/05/04 17:07:30 by acolas            #+#    #+#             */
+/*   Updated: 2017/05/04 17:41:54 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int len;
-
-	if (s)
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else
 	{
-		len = ft_strlen(s);
-		if (len > 0)
+		if (n < 0)
 		{
-			write(fd, s, len);
-			ft_putchar_fd('\0', fd);
+			ft_putchar_fd('-', fd);
+			n = -n;
 		}
+		if (n > 9)
+			ft_putnbr_fd((n / 10), fd);
+		ft_putchar_fd((n % 10 + '0'), fd);
 	}
 }
