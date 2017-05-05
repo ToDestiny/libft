@@ -12,41 +12,23 @@
 
 #include "libft.h"
 
-int		ft_number(const char *str, unsigned long long int i, int neg)
-{
-	unsigned long long int	num;
-
-	num = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		num = num * 10 + (str[i] - '0');
-		i++;
-	}
-	if (neg == 1)
-	{
-		num = -num;
-		return (num);
-	}
-	return (num);
-}
-
 int		ft_atoi(const char *str)
 {
-	unsigned long long int	i;
-	int						neg;
+	int		i;
+	int		num;
+	int		sign;
 
 	i = 0;
-	neg = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+	num = 0;
+	sign = 1;
+	while (*(str + i) == '\n' || *(str + i) == '\t' || *(str + i) == '\r' ||
+		*(str + i) == '\v' || *(str + i) == '\f' || *(str + i) == ' ')
 		i++;
-	if (str[i] == '-')
-	{
-		neg = 1;
-		ft_putchar('-');
+	if (*(str + i) == '-')
+		sign = -1;
+	if (*(str + i) == '-' || *(str + i) == '+')
 		i++;
-	}
-	else if (str[i] == '+')
-		i++;
-	return (ft_number(str, i, neg));
+	while (*(str + i) && *(str + i) >= '0' && *(str + i) <= '9')
+		num = num * 10 + (*(str + i++) - '0');
+	return (num * sign);
 }
