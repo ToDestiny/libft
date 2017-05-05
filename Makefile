@@ -72,6 +72,7 @@ SRC = ft_putchar.c \
 	  ft_lstdelone.c \
 	  ft_iterative_power.c \
 	  ft_iterative_factorial \
+	  ft_sqrt \
 
 INC = libft.h
 
