@@ -35,10 +35,3 @@ char	*ft_strrev(char *str)
 	}
 	return (str);
 }
-
-#include <stdio.h>
-int		main(void)
-{
-	printf("%s\n", ft_strrev("Salut"));
-	return (0);
-}
