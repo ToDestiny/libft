@@ -82,5 +82,6 @@ int					ft_iterative_power(int n, int power);
 int					ft_iterative_factorial(int n);
 int					ft_sqrt(int n);
 int					ft_is_prime(int n);
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 
 #endif

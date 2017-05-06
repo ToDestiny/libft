@@ -74,6 +74,7 @@ SRC = ft_putchar.c \
 	  ft_iterative_factorial.c \
 	  ft_sqrt.c \
 	  ft_is_prime.c \
+	  ft_lstdelone.c \
 
 INC = libft.h
 
