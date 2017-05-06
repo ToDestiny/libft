@@ -76,6 +76,8 @@ SRC = ft_putchar.c \
 	  ft_is_prime.c \
 	  ft_lstdelone.c \
 	  ft_lstdel.c \
+	  ft_lstadd.c \
+	  ft_lstiter.c \
 
 INC = libft.h
 

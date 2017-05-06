@@ -84,5 +84,6 @@ int					ft_sqrt(int n);
 int					ft_is_prime(int n);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstadd(t_list **alst, t_list *new);
 
 #endif
