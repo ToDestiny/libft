@@ -6,7 +6,7 @@
 #    By: acolas <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/24 14:27:26 by acolas            #+#    #+#              #
-#    Updated: 2017/05/05 15:30:55 by acolas           ###   ########.fr        #
+#    Updated: 2017/09/05 15:41:21 by acolas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,7 @@ SRC = ft_putchar.c \
 	  ft_lstadd.c \
 	  ft_lstiter.c \
 	  ft_lstmap.c \
+	  get_next_line.c \
 
 INC = libft.h
 
